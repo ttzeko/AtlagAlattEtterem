@@ -1,1 +1,1 @@
-# AtlagAlattEtterem
+Hobby projekt gyakorlasra
