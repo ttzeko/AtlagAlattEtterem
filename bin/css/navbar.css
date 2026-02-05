@@ -1,6 +1,6 @@
 /* Alapvető formázás */
 .navbar {
-    background-color: #2c3e50;
+    background-color: #494c4e;
     /* Sötétszürke háttér */
     padding: 1rem;
     font-family: sans-serif;
@@ -32,9 +32,9 @@
 
 /* Egér ráhúzáskor (hover) változó stílus */
 .nav-list li a:hover {
-    background-color: #34495e;
+    background-color: #476686;
     /* Valamivel világosabb szürke háttér */
-    color: #1abc9c;
+    color: #8cadff;
     /* Türkizkék szövegszín */
     border-radius: 8px;
     /* Enyhén lekerekített sarkok a kijelölésnél */
@@ -59,30 +59,61 @@
 .titlemain {
     text-align: center;
     padding-top: 3%;
-    font-size: 96px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 900;
+    font-size: 108px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 15px;
+    font-weight: 150;
     color: white;
     text-shadow: 2px 2px 5px black ;
 }
 
 body {
-    background: #2A7B9B;
-    background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(0, 196, 118, 1) 100%);
+    background: #161616;
+    z-index: 1;
 }
 
 .aboutindex{
+
 color:white;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 padding-left: 5%;
 padding-top: 1%;
 font-size: 24px;
-background-color: #2c3e50;
 text-align: left;
 align-content: baseline;
 width: 50%;
 margin-left:10%;
 margin-top: 10%;
 padding-bottom: 1%;
-border-radius:25px;
+background: rgba(2, 2, 2, 0.40);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(7.4px);
+-webkit-backdrop-filter: blur(7.4px);
+border: 1px solid rgba(20, 20, 20, 0.3);
+/* From https://css.glass */
+background: rgba(0, 0, 0, 0.6);
+border-radius: 25px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(7.4px);
+-webkit-backdrop-filter: blur(7.4px);
+border: 1px solid rgba(0, 0, 0, 0.1);
+box-shadow: 0px 0px 10px rgb(23, 23, 23);
+
+}
+
+.etteremkep{
+    position: absolute;
+    z-index: -3;
+    width: 95vw;
+    margin-top: 80px;
+    border-radius: 100px;
+    box-shadow: 0px 0px 50px 35px rgb(33, 33, 33);
+   
+}
+
+.imgdiv{
+    display: flex;
+    justify-content: center;
+
 }
