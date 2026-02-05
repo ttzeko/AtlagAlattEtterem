@@ -1,46 +1,88 @@
 /* Alapvető formázás */
 .navbar {
-  background-color: #2c3e50; /* Sötétszürke háttér */
-  padding: 1rem;
-  font-family: sans-serif;
-  border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;
+    background-color: #2c3e50;
+    /* Sötétszürke háttér */
+    padding: 1rem;
+    font-family: sans-serif;
+    border-radius: 10px;
 }
 
 .nav-list {
-  list-style-type: none; /* Listajelek eltávolítása */
-  margin: 0;
-  padding: 0;
-  display: flex; /* Vízszintes elrendezés */
-  justify-content: center; /* Középre igazítás */
-  gap: 20px; /* Távolság a menüpontok között */
+    list-style-type: none;
+    /* Listajelek eltávolítása */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* Vízszintes elrendezés */
+    justify-content: center;
+    /* Középre igazítás */
+    gap: 20px;
+    /* Távolság a menüpontok között */
 }
 
 .nav-list li a {
-  color: white;
-  text-decoration: none; /* Aláhúzás eltávolítása */
-  font-weight: bold;
-  padding: 8px 16px;
-  transition: 0.3s ease; /* Finom átmenet az animációhoz */
+    color: white;
+    text-decoration: none;
+    /* Aláhúzás eltávolítása */
+    font-weight: bold;
+    padding: 8px 16px;
+    transition: 0.3s ease;
+    /* Finom átmenet az animációhoz */
 }
 
 /* Egér ráhúzáskor (hover) változó stílus */
 .nav-list li a:hover {
-  background-color: #34495e; /* Valamivel világosabb szürke háttér */
-  color: #1abc9c; /* Türkizkék szövegszín */
-  border-radius: 8px; /* Enyhén lekerekített sarkok a kijelölésnél */
+    background-color: #34495e;
+    /* Valamivel világosabb szürke háttér */
+    color: #1abc9c;
+    /* Türkizkék szövegszín */
+    border-radius: 8px;
+    /* Enyhén lekerekített sarkok a kijelölésnél */
 }
 
 /* Opcionális: Aktív oldal jelölése */
 .nav-list li a.active {
-  color: #1abc9c;
-  border-bottom: 2px solid #1abc9c;
+    color: #1abc9c;
+    border-bottom: 2px solid #1abc9c;
 }
 
 /* Mobilbarát nézet (600px alatti képernyőnél) */
 @media (max-width: 600px) {
-  .nav-list {
-    flex-direction: column; /* Egymás alá kerülnek a menüpontok */
-    align-items: center;
-    gap: 10px;
-  }
+    .nav-list {
+        flex-direction: column;
+        /* Egymás alá kerülnek a menüpontok */
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+.titlemain {
+    text-align: center;
+    padding-top: 3%;
+    font-size: 96px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    color: white;
+    text-shadow: 2px 2px 5px black ;
+}
+
+body {
+    background: #2A7B9B;
+    background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(0, 196, 118, 1) 100%);
+}
+
+.aboutindex{
+color:white;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+padding-left: 5%;
+padding-top: 1%;
+font-size: 24px;
+background-color: #2c3e50;
+text-align: left;
+align-content: baseline;
+width: 50%;
+margin-left:10%;
+margin-top: 10%;
+padding-bottom: 1%;
+border-radius:25px;
 }
