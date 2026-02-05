@@ -1,5 +1,5 @@
 @view-transition {
-  navigation: auto;
+    navigation: auto;
 }
 
 body {
@@ -9,12 +9,13 @@ body {
 /* Makes the scrollbar fit a dark theme */
 html {
     overflow-y: scroll;
-    color-scheme: dark; 
+    color-scheme: dark;
 }
 
 /* Optional: Even finer control for modern browsers */
 body {
-    scrollbar-color: #1abc9c #2c3e50; /* thumb (handle) and track */
+    scrollbar-color: #1abc9c #2c3e50;
+    /* thumb (handle) and track */
     scrollbar-width: thin;
 }
 
@@ -27,11 +28,14 @@ html {
 
 /* Alapvető formázás */
 .navbar {
-    background-color: #494c4e;
+    background: #2A7B9B;
+    background: linear-gradient(90deg, rgba(42, 123, 155, 0.3) 0%, rgba(0, 196, 186, 1) 100%);
     /* Sötétszürke háttér */
-    padding: 1.3rem;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    border-radius: 10px;
+    padding: 30px;
+    margin-left: 2.2%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: fit-content;
+    border-bottom-right-radius: 18px;
 }
 
 .nav-list {
@@ -54,15 +58,15 @@ html {
     font-weight: bold;
     font-size: larger;
     padding: 8px 16px;
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-out;
     /* Finom átmenet az animációhoz */
 }
 
 /* Egér ráhúzáskor (hover) változó stílus */
 .nav-list li a:hover {
-    background-color: #476686;
+    background-color: #2c5360;
     /* Valamivel világosabb szürke háttér */
-    color: #8cadff;
+    color: #31cefe;
     /* Türkizkék szövegszín */
     border-radius: 8px;
     /* Enyhén lekerekített sarkok a kijelölésnél */
@@ -92,7 +96,7 @@ html {
     letter-spacing: 15px;
     font-weight: 150;
     color: white;
-    text-shadow: 2px 2px 5px black ;
+    text-shadow: 2px 2px 5px black;
 }
 
 body {
@@ -100,50 +104,95 @@ body {
     z-index: 1;
 }
 
-.aboutindex{
+.aboutindex {
 
-color:white;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-padding-left: 5%;
-padding-top: 1%;
-font-size: 24px;
-text-align: left;
-align-content: baseline;
-width: 50%;
-margin-left:10%;
-margin-top: 10%;
-padding-bottom: 1%;
-background: rgba(2, 2, 2, 0.40);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(7.4px);
--webkit-backdrop-filter: blur(7.4px);
-border: 1px solid rgba(20, 20, 20, 0.3);
-/* From https://css.glass */
-background: rgba(0, 0, 0, 0.6);
-border-radius: 25px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(7.4px);
--webkit-backdrop-filter: blur(7.4px);
-border: 1px solid rgba(0, 0, 0, 0.1);
-box-shadow: 0px 0px 10px rgb(23, 23, 23);
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 5%;
+    padding-top: 1%;
+    font-size: 24px;
+    text-align: left;
+    align-content: baseline;
+    width: 50%;
+    margin-left: 10%;
+    margin-top: 10%;
+    padding-bottom: 1%;
+    background: rgba(2, 2, 2, 0.40);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.4px);
+    -webkit-backdrop-filter: blur(7.4px);
+    border: 1px solid rgba(20, 20, 20, 0.3);
+    /* From https://css.glass */
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 25px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.4px);
+    -webkit-backdrop-filter: blur(7.4px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px rgb(23, 23, 23);
 
 }
 
-.etteremkep{
+.etteremkep {
     position: absolute;
     z-index: -3;
     width: 95%;
-    left:50%;
+    left: 50%;
     transform: translateX(-50%);
-    margin-top: 80px;
-    border-radius: 100px;
+    /* margin-top: 80px; */
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
     box-shadow: 0px 0px 50px 35px rgb(33, 33, 33);
-   
+
 }
 
-.imgdiv{
+.imgdiv {
     display: flex;
     justify-content: center;
 
+}
+
+
+.nav-list {
+    display: flex;
+    /* This allows the 'order' property to work */
+}
+
+.nav-list li {
+    transition: order 0.5s ease; /* Smooth reordering */
+}
+
+/* This class will be added by JavaScript */
+.first-place {
+    order: -1 !important;
+}
+
+.nav-list {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-list li {
+    /* This allows the item to move without pushing others initially */
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1); 
+    position: relative;
+    left: 0;
+}
+
+/* When the JS adds this, it triggers the movement */
+.nav-list li.first-place {
+    order: -1;
+    animation: slideInFromRight 0.6s ease-out;
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100px); /* Adjust based on your menu width */
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
