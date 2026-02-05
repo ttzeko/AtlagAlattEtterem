@@ -163,9 +163,22 @@ body {
     transition: order 0.5s ease; /* Smooth reordering */
 }
 
-/* This class will be added by JavaScript */
-.first-place {
-    order: -1 !important;
+.nav-list li.first-place {
+    order: -1;
+    /* We use 'forwards' to make sure it stays at the end of the animation */
+    animation: slideFromOriginal 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes slideFromOriginal {
+    0% {
+        /* This 'pushes' it back toward where it was on the previous page */
+        transform: translateX(150px); 
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 .nav-list {
