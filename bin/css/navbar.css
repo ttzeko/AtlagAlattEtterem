@@ -1,3 +1,11 @@
+@view-transition {
+  navigation: auto;
+}
+
+body {
+    overflow-x: hidden;
+}
+
 /* Alapvető formázás */
 .navbar {
     background-color: #494c4e;
@@ -26,7 +34,7 @@
     /* Aláhúzás eltávolítása */
     font-weight: bold;
     padding: 8px 16px;
-    transition: 0.3s ease;
+    transition: 0.5s ease-in-out;
     /* Finom átmenet az animációhoz */
 }
 
@@ -105,7 +113,9 @@ box-shadow: 0px 0px 10px rgb(23, 23, 23);
 .etteremkep{
     position: absolute;
     z-index: -3;
-    width: 95vw;
+    width: 95%;
+    left:50%
+    transform: translateX(-50%);
     margin-top: 80px;
     border-radius: 100px;
     box-shadow: 0px 0px 50px 35px rgb(33, 33, 33);
