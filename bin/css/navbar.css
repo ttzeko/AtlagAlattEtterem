@@ -6,12 +6,31 @@ body {
     overflow-x: hidden;
 }
 
+/* Makes the scrollbar fit a dark theme */
+html {
+    overflow-y: scroll;
+    color-scheme: dark; 
+}
+
+/* Optional: Even finer control for modern browsers */
+body {
+    scrollbar-color: #1abc9c #2c3e50; /* thumb (handle) and track */
+    scrollbar-width: thin;
+}
+
+
+html {
+    scroll-behavior: smooth;
+    /* Keep your existing fix too! */
+    overflow-y: scroll;
+}
+
 /* Alapvető formázás */
 .navbar {
     background-color: #494c4e;
     /* Sötétszürke háttér */
-    padding: 1rem;
-    font-family: sans-serif;
+    padding: 1.3rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     border-radius: 10px;
 }
 
@@ -33,6 +52,7 @@ body {
     text-decoration: none;
     /* Aláhúzás eltávolítása */
     font-weight: bold;
+    font-size: larger;
     padding: 8px 16px;
     transition: 0.5s ease-in-out;
     /* Finom átmenet az animációhoz */
@@ -114,7 +134,7 @@ box-shadow: 0px 0px 10px rgb(23, 23, 23);
     position: absolute;
     z-index: -3;
     width: 95%;
-    left:50%
+    left:50%;
     transform: translateX(-50%);
     margin-top: 80px;
     border-radius: 100px;
